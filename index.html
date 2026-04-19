@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即申請體驗罐 - 可貝可媽咪寶貝club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>立即申請體驗罐</h1>
+        </header>
+
+        <form id="applicationForm">
+            <div class="form-row">
+                <label for="name">姓名</label>
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="請輸入真實姓名" required>
+                    <span class="hint">*姓名欄位需與媽媽手冊或寶寶手冊上的媽媽姓名相同</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="birthday">生日</label>
+                <div class="input-group">
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="email">E-mail</label>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="abc12345@gmail.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">手機</label>
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" placeholder="請輸入手機號碼" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="tel">電話</label>
+                <div class="input-group tel-group">
+                    <input type="text" id="tel-area" name="tel-area" placeholder="區域" style="width: 80px;">
+                    <span class="separator">-</span>
+                    <input type="text" id="tel-number" name="tel-number" placeholder="請輸入電話號碼" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>地址</label>
+                <div class="input-group address-group">
+                    <select name="city" id="city">
+                        <option value="">縣市</option>
+                        <option value="Taipei">台北市</option>
+                        <!-- Add other cities -->
+                    </select>
+                    <select name="district" id="district">
+                        <option value="">區域</option>
+                        <!-- Add other districts -->
+                    </select>
+                    <input type="text" name="address" placeholder="請輸入完整地址" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="baby-birthday">寶寶生日</label>
+                <div class="input-group">
+                    <input type="date" id="baby-birthday" name="baby-birthday" required>
+                    <span class="hint">* 限預產期3個月內及寶寶18個月以內</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="baby-name">寶寶姓名</label>
+                <div class="input-group">
+                    <input type="text" id="baby-name" name="baby-name" placeholder="請輸入寶寶姓名">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="brand">目前使用品牌</label>
+                <div class="input-group">
+                    <select name="brand" id="brand">
+                        <option value="">請選擇使用品牌</option>
+                        <option value="Brand A">品牌 A</option>
+                        <option value="Brand B">品牌 B</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>上傳照片</label>
+                <div class="input-group upload-group">
+                    <button type="button" class="btn-upload">上傳檔案</button>
+                    <span class="hint">* 上傳檔案限制PNG、JPG，5MB以內</span>
+                </div>
+            </div>
+
+            <div class="agreements">
+                <div class="checkbox-row">
+                    <input type="checkbox" id="agree-privacy" name="agree-privacy" required>
+                    <label for="agree-privacy">我已閱讀並同意「隱私權政策」及「使用條款」。</label>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="agree-promo" name="agree-promo">
+                    <label for="agree-promo">本人同意貴公司使用我的個人資料提供任何推廣優惠和資訊。</label>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="agree-club" name="agree-club">
+                    <label for="agree-club">我同意成為可貝可媽咪寶貝club會員，並已詳閱「入會須知」及「隱私政策」的條款。</label>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="agree-right" name="agree-right">
+                    <label for="agree-right">可貝可保留出貨權利，若有無法接受申請之情形，可貝可得拒絕接受申請。</label>
+                </div>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="btn-submit">確認送出</button>
+            </div>
+        </form>
+
+        <section class="notice">
+            <h2>注意事項</h2>
+            <div class="notice-content">
+                <p>每位寶寶限參加一次，不符合資格者，恕不受理。</p>
+                <p>主辦單位保留修改、終止或更改活動之權力。</p>
+                <p>其他注意事項：</p>
+                <ul>
+                    <li>荷蘭皇家菲仕蘭有限公司(以下稱主辦單位)，保留審查活動參加者(以下稱參加者)資格之權利。</li>
+                    <li>參加者保證所有填寫、提供之資料均為真實完整且正確，且未有冒用或盜用任何第三人之資料。若有資料不實、不完整及不正確，或多次無法取得聯絡，將取消參與資格。</li>
+                    <li>參加者國籍限中華民國，商品寄送地址限台灣本島，其他地區視為無效登錄資料。</li>
+                    <li>本活動因故無法進行時，主辦單位保有隨時修正、暫停或終止本活動之權利，不另行公告通知。</li>
+                    <li>其他未盡事宜，悉依主辦單位相關規定。</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>本網站由荷蘭皇家菲仕蘭可貝可授權在台灣地區的經銷商營運及維護。</p>
+            <p>如果您加入荷蘭皇家菲仕蘭可貝可的可貝可®媽咪寶貝Club成為會員，代表您同意收到由荷蘭皇家菲仕蘭可貝可委託的經銷商或供應商提供給您的促銷及行銷訊息。</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
